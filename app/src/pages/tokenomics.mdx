@@ -1,0 +1,77 @@
+import { Note } from '@/components/mdx'
+import PieChart from '@/components/Chart'
+
+export const description =
+  'How the mechanisms for scenario pool creation and resolution, covering the movements of ETH within these steps and the roles played by protocol participants across both user types.'
+
+# Protocol Tokenomics
+
+The process shown in the [Workflow](/workflow) section explains the mechanisms for scenario pool creation and resolution, covering the movements of ETH within these steps and the roles played by protocol participants across both user types.
+
+However, without additional protection, such a process would be highly vulnerable to manipulation. Depending on the number of confirmer-joiners required, Sybil attacks would be easily carried out,  allowing attackers to collude in creating confirmations, or for one attacker to act as both the confirmer-maker and all confirmer-joiners. This would leave open the possibility of that attacker incorrectly marking a scenario as ‘resolved,’ sending out false notifications, and unfairly gaining access to all of that scenario pool’s bounty.
+
+To protect against this, SCENARIO will make use of its own token to serve a range of crypto-economic functions and underpin a more robust protocol.
+
+## The SNR Token
+
+In addition to representing an abbreviation of the protocol’s name, the acronym SNR also stands for signal-to-noise ratio. SCENARIO will be a protocol that helps to separate signal from noise. 
+
+The SNR token will be crucial to the effective functioning of the protocol once fully deployed.
+
+It will not function as a governance token, and will not be used to vote on protocol changes or upgrades. Instead, SNR will perform a set of roles that help to protect against Sybil attacks, facilitate dispute resolution, and allow for the protocol’s revenues to be distributed to its users over time. 
+
+In order to support a safe, staged protocol roll-out (during which the V1 scenario pool contracts will be used to test and monitor user behaviour and incentive balancing), the SNR token will not be generated at protocol launch (see Section XXX: Staged roll-out).
+
+## Token's Primary functions
+
+### 1 - Revenue Distribution
+
+6% of all funds in each scenario pool, once resolved, will be returned to ‘the protocol’ as revenue. 
+
+Of this proportion, 4% will be sent as revenue to SNR stakers and 2% will be sent to the protocol’s growth pool (see section XXX). 
+
+SNR will be staked and/or used to provide liquidity, with these actions giving users a ‘staking weight’ which will then determine their proportional claim on the 4% of all protocol revenues directed to stakers.
+
+A total protocol fee cut of 6% from resolved pools is expected to be viable as long as resolving scenario pools is profitable for those involved in correctly confirming them. Engaged, rational actors will choose to contribute to that process because they will profit from doing so, with this being true even if the protocol’s cut was much larger than 6%.
+
+At scale, SCENARIO will be populated with many thousands of scenario pools, and thousands of active confirmers. Competitor products would first need to compete on factors such as network size, overall bounty pool size and speed of scenario confirmation, before being able to compete by bettering SCENARIO’s 6% take-rate. 
+
+If the underlying protocol is bootstrapped successfully, other builders or competitors will be incentivized to rely collectively on the powerful SCENARIO protocol and its smart contracts, and instead compete at the user-interface level by adding additional take-rates of their own at that layer.
+
+(See section XXX: Protocol revenue) 
+
+### 2 - Collateral: Sybil Resistance and Slashing
+
+Whilst the majority of users who hold SNR will wish to stake it in order to benefit more passively from protocol revenue distributions, staking is not required for all users. Only users who wish to act as confirmer-makers or confirmer-joiners will be required to stake and lock some of their SNR tokens. This requirement will minimise the risk of Sybil attacks, as it will introduce a cost for each new address that wishes to act as a confirmer (whilst also putting those funds at risk should the confirmations be dishonest). 
+A key role of the SNR token will therefore be to act as collateral, allowing slashing to occur in cases of Sybil attacks or dishonest behaviour by confirmer-makers or confirmer-joiners.*
+Following the resolution of a scenario pool, notifications will be triggered and sent to its askers immediately. The pool will then enter a 72-hour cool down period. During this time, if more than 20%** (‘asker dispute threshold’) of that pool’s askers flag the pool as having been incorrectly resolved, the following will occur:
+1. The planned pay-out to that pool’s confirmers will be cancelled
+2. The pool’s confirmer-maker will have 10% of their staked SNR slashed**
+3. The pool’s confirmer-joiners will have 5% of their staked SNR slashed**
+4. The pool will re-open to additional asker-joiners or for fund removal
+5. Slashed SNR will be sent to the builder bounty fund (50%) and the growth pool (50%)
+
+<Note>* It is worth noting that SCENARIO’s design means that honest Sybil attacks do not harm the protocol’s core purpose of triggering notifications; as long as askers are quickly and correctly advised of scenarios that have occurred, it is inconsequential if a small number of actors colluded or acted under many addresses to resolve that pool. It is only in cases of dishonest or incorrect notifications that Sybil attacks present a problem, and it is for this reason that the 72-hour cool down period and SNR slashing exist.</Note>
+<Note>** It should also be noted that protocol rules relating to the ideal asker dispute threshold percentage, slashing percentages, minimum staking amounts, staking lock periods, staking tiers and/or proportional access to revenue distributions will need to be refined during protocol testing, given the relationship between these considerations and factors such as organic user behaviour, game theory and SNR price.</Note>
+
+The protocol will seek to strike a balance between Sybil resistance and fairness, such that anyone who wishes to participate as a confirmer is able to do so.
+
+The protocol’s early advisors will play a key role in assisting to refine the protocol’s planned tokenomics and refining the balance between incentives and penalties.
+
+It is possible that a final additional layer of arbitration may need to be added (as seen in UMA protocol). If this is deemed necessary, the SNR token will play a crucial role in this arbitration process.
+
+## SNR Token Supply and Distribution
+
+The SNR token will be a standard ERC-20 token with a maximum supply of 100 million (100,000,000). It will not be minted immediately, instead being introduced as part of a token generation event (TGE) which will follow an initial period of more limited-functionality protocol testing and user reputation scoring. (See section XXX: Staged roll-out). There will be no tail emissions or ongoing inflation of the token supply; 4 years after the TGE, the supply will be fully distributed (note: fully vesting the supply will take one additional year).
+
+The SNR token, once minted, will exist in a combination of escrowed and liquid form. The majority will begin as escrowed SNR and will be subject to vesting periods of up to 3 years (linear). Some SNR will be liquid at TGE in order to support the use of these tokens for builder and partner incentives. More detail on these breakdowns is shown below.
+
+SNR token allocation:<br/>
+* <span class="text-white">60%</span> will be allocated to users of the protocol across its first 4 years (with 1-year linear vesting), distributed across 2 separate token distribution events: one which will follow a period of protocol testing and use by the community in year 1, and a second which will run over years 2-4 and be related to protocol use. The first testing phase (and distribution 1) will be based partly on whitelisted addresses.
+* <span class="text-white">13%</span> will be allocated to the founding team (3-year linear vesting, 1-year cliff)
+* <span class="text-white">12%</span> will be allocated to early backers (3-year linear vesting, 1-year cliff)
+* <span class="text-white">7%</span> will be allocated to a builder bounty fund
+* <span class="text-white">6%</span> will be allocated to a community marketing and partnering fund
+* <span class="text-white">2%</span> will be allocated to advisors (3-year linear vesting, 1-year cliff)
+
+<PieChart />

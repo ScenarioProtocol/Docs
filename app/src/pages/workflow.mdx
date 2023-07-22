@@ -1,0 +1,14 @@
+export const description =
+  'How a pool is created and updates based on interactions from askers and confirmers.'
+
+# Protocol Workflow
+
+Diagram Goes Here
+
+Notes about scenario pool functionality:
+
+* The above diagram represents a standard scenario pool design; additional pool designs will allow for options such as gated pools (limiting access to specific addresses) and pre-funded pools (whereby an asker-maker can choose to cover the cost for all future asker-joiners) - a feature which may be desirable if other projects, protocols or developers are setting up notification pools for their communities
+* Users will always be able to withdraw their funds from a scenario pool during the period in which it remains live
+* Users will be able to denominate their pool fee in a stablecoin rather than ETH if they prefer
+* Future iterations of the protocol may allow for pooled funds to be stored as staked ETH or other yield-bearing assets, opening up additional protocol revenue and/or user revenue; this is anticipated to reduce friction for asker-makers and asker-joiners, who would otherwise need to be comfortable having their funds lie dormant in a pending scenario pool when they could be earning yield on them elsewhere
+* Future iterations of the protocol will aim to use a portion of protocol revenue to fund a ‘free pool’ option; such a model will be  important for maximising growth potential, however will likely have much lower incentives for confirmer-makers and confirmer-joiners, and so may also come with slower notification responsiveness 

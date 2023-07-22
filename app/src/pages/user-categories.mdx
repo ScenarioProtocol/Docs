@@ -1,0 +1,25 @@
+export const description =
+  'The two different user types of the Scenario Protocol.'
+
+# Protocol User Categories
+
+Who are SCENARIO’s users and what are their roles?
+
+## Askers
+
+* An asker is a user who wishes to be notified as soon as a scenario has occurred and/or when specific scenario conditions have been met.
+* Askers fall into two categories:<br/>
+  * <span class="text-emerald-500">Asker-maker</span>: a user who generates a new scenario on the platform by defining the parameters for their notification and paying ETH to create a scenario pool. <br/>
+  * <span class="text-emerald-500">Asker-joiner</span>: a user who 'joins in' by adding ETH to an existing scenario pool because they also wish to be notified when that scenario’s conditions are met.
+* Any user of the platform can act as an asker-maker or an asker-joiner at any time.
+* Askers play a crucial role in populating the protocol with scenario pools, joining other user-created pools, and generating protocol revenue. At scale, askers are likely to constitute the greater majority of users; many askers may never engage with the full suite of protocol activities such as staking or confirming, instead accessing it only through more abstracted front-ends.
+
+## Confirmers
+
+* A confirmer is a user who confirms that a scenario has occurred (i.e. that its conditions have been met).
+* Confirmers fall into two categories:
+  * <span class="text-emerald-500">Confirmer-maker</span>: a user who is first to state that a scenario’s conditions have been met. 
+  * <span class="text-emerald-500">Confirmer-joiner</span>: a user who ‘joins in’ by subsequently verifying that a scenario’s conditions have been met (i.e. by agreeing with the confirmer-maker). 
+* A scenario is not considered resolved until it has been verified by a set number of confirmer-joiners (as specified in the parameters set by the scenario’s asker-maker).
+* Any user of the platform can act as a confirmer-maker or a confirmer-joiner at any time.
+* Confirmers play a crucial role in ‘keeping the machine running’ by resolving scenario pools and triggering notifications for askers. Confirmers are economically incentivised to perform this role to a high standard. Confirmers will usually be engaged users who are likely to represent a smaller percentage of all users once the protocol has scaled.

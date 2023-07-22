@@ -1,0 +1,28 @@
+:root {
+  --shiki-color-text: theme('colors.white');
+  --shiki-token-constant: #34d399;
+  --shiki-token-string: #34d399;
+  --shiki-token-comment: theme('colors.zinc.500');
+  --shiki-token-keyword: theme('colors.sky.300');
+  --shiki-token-parameter: theme('colors.pink.300');
+  --shiki-token-function: theme('colors.violet.300');
+  --shiki-token-string-expression: #34d399;
+  --shiki-token-punctuation: theme('colors.zinc.200');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose table:not(.table-auto) td:not(:first-child), .prose table:not(.table-auto) th:not(:first-child) {
+  text-align: center!important;
+}
+
+th p {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
+
+.table-auto th {
+  vertical-align: top;
+}
