@@ -1,5 +1,5 @@
 import React from 'react';
-import workflowImg from '../../images/snr_workflow.png'
+import workflowImg from '../../images/snr_workflow.jpg'
 import ImageLightbox from './Lightbox';
 
 const WorkflowDiagram = () => {
