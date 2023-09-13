@@ -35,7 +35,7 @@ const ImageLightbox = ({
                 iconPrev: () => <span></span>
             }}
         />
-        <div className='flex justify-center items-center relative cursor-pointer mt-6' onClick={() => setOpen(!open)}>
+        <div className='flex justify-center items-center relative cursor-pointer' onClick={() => setOpen(!open)}>
             <Image
                 src={src}
                 width={width || 600}

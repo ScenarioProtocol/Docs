@@ -1,6 +1,9 @@
 export const description =
   "Get notified when a Scenario Pool has been confirmed."
 
+import UserFlowDiagram from '@/components/images/UserFlowDiagram';
+import NotificationsFlow from '@/components/images/NotificationsFlow';
+
 # Notifications
 
 Moving from on-chain scenario resolution to off-chain notification
@@ -9,9 +12,9 @@ Moving from on-chain scenario resolution to off-chain notification
   Once the on-chain scenario pool workflow is marked as 'RESOLVED' (as shown in the final phase in [Workflow](/workflow), the notification service will be triggered. It is at this step that the on-chain process produces an output which triggers the off-chain notification service.
 </Note>
 
----
+<NotificationsFlow />
 
-Diagram Goes Here
+<UserFlowDiagram />
 
 ---
 
