@@ -40,7 +40,7 @@ const ImageLightbox = ({
                 src={src}
                 width={width || 600}
                 height={height || 600}
-                className='h-auto w-auto max-w-full max-h-[460px]'
+                className='h-auto w-auto max-w-full'
                 {...props}
             />
             <div className='absolute group flex justify-center items-center inset-0 transition-all duration-200 bg-transparent hover:bg-black/30'/>
