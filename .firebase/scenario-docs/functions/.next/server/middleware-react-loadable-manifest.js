@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST={"..\\components\\Chart.jsx -> react-apexcharts":{id:7229,files:["static/chunks/6c44d60f.8350a15298c0d484.js","static/chunks/229.81b90bcc011f115c.js"]}};
