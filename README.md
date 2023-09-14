@@ -1,6 +1,6 @@
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="src/images/logo-white.svg" alt="Logo" width="80" height="80">
+  <a href="https://scenarioprotocol.io">
+    <img src="src/images/logo-white.svg" alt="Scenario Protocol Logo" width="250" height="60">
   </a>
 
   <h3 align="center">Scenario Protocol</h3>
