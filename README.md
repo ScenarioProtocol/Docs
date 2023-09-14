@@ -8,7 +8,7 @@
   <p align="center">
     Our Litepaper V1.0 for the Scenario Protocol. 
     <br />
-    <a href="https://docs.scenarioprotocol.io" target="_blank"><strong>Explore the docs »</strong></a>
+    <a href="https://docs.scenarioprotocol.io" target="_blank"><strong>Explore the Litepaper »</strong></a>
     <br />
     <br />
     <a href="https://scenarioprotocol.io" target="_blank">View Website</a>
