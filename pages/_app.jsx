@@ -28,7 +28,24 @@ export default function App({ Component, pageProps }) {
         ) : (
           <title>{`${pageProps.title} - Scenario Protocol Documentation`}</title>
         )}
-        <meta name="description" content={pageProps.description} />
+        <meta property="og:url" content="https://docs.scenarioprotocol.io/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${pageProps.title} - Scenario Protocol Documentation`} />
+        <meta property="og:description" content="Scenario is a decentralised protocol which allows for on-chain consensus of user-requested topics, whether web3 related or offline occurrences." />
+        <meta property="og:image" content="https://scenarioprotocol.io/og.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="docs.scenarioprotocol.io" />
+        <meta property="twitter:url" content="https://docs.scenarioprotocol.io/" />
+        <meta
+          name="twitter:title"
+          content="Scenario Protocol Docs - A decentralised notifications protocol"
+        />
+        <meta
+          name="twitter:description"
+          content="Scenario is a decentralised protocol which allows for on-chain consensus of user-requested topics, whether web3 related or offline occurrences."
+        />
+        <meta name="twitter:image" content="https://scenarioprotocol.io/og.png" />
       </Head>
       <MDXProvider components={mdxComponents}>
         <Layout {...pageProps}>

@@ -3,8 +3,7 @@ import { motion } from 'framer-motion'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import logoWhite from '@/images/logo-white.svg'
-import logo from '@/images/logo.svg'
+import logo from '@/images/Scenario.svg'
 import { Navigation } from '@/components/Navigation'
 import { Prose } from '@/components/Prose'
 import { SectionProvider } from '@/components/SectionProvider'
@@ -21,8 +20,7 @@ export function Layout({ children, sections = [] }) {
           <div className="contents lg:pointer-events-auto lg:block lg:w-72 lg:overflow-y-auto lg:border-r lg:border-zinc-900/10 lg:px-6 lg:pt-4 lg:pb-8 lg:dark:border-white/10 xl:w-80">
             <div className="hidden lg:flex">
               <Link href="/" aria-label="Home">
-                <Image src={logo.src} className='h-6 dark:hidden' width={125} height={30} />
-                <Image src={logoWhite.src} className='h-6 hidden dark:block' width={125} height={30} />
+                <Image src={logo.src} className='h-10 hidden dark:block' width={125} height={60} />
               </Link>
             </div>
             <Header />
