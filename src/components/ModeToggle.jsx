@@ -33,11 +33,12 @@ export function ModeToggle() {
     let isSystemDarkMode = darkModeMediaQuery.matches
     let isDarkMode = document.documentElement.classList.toggle('dark')
 
-    if (isDarkMode === isSystemDarkMode) {
-      delete window.localStorage.isDarkMode
-    } else {
-      window.localStorage.isDarkMode = isDarkMode
-    }
+    // if (isDarkMode === isSystemDarkMode) {
+    //   delete window.localStorage.isDarkMode
+    // } else {
+    //   window.localStorage.isDarkMode = isDarkMode
+    // }
+    window.localStorage.isDarkMode = true
   }
 
   return (

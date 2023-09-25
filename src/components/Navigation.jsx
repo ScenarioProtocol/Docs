@@ -200,6 +200,7 @@ export const navigation = [
       { title: 'Builder Bounty', href: '/builder-bounty' },
       { title: 'Marketing & Partnering', href: '/marketing-and-partnering' },
       { title: 'Staged Roll-out', href: '/rollout' },
+      { title: 'Arbiter Fund', href: '/arbiter-fund' },
       { title: 'Growth Pool', href: '/growth-pool' },
       { title: 'Early Phases', href: '/early-phases' },
       { title: 'Advisors', href: '/advisors' },
