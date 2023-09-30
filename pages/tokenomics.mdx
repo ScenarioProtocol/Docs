@@ -42,17 +42,23 @@ If the underlying protocol is bootstrapped successfully, other builders or compe
 
 ### 2 - Collateral: Sybil Resistance and Slashing
 
-Whilst the majority of users who hold SNR will wish to stake it in order to benefit passively from protocol revenue distributions, staking is not required for all users. Only users who wish to act as confirmer-makers, confirmer-joiners or arbiters will be required to stake and lock some of their SNR tokens. This requirement will minimise the risk of Sybil attacks, as it will introduce a cost for each new address that wishes to act as a confirmer (whilst also putting those funds at risk should the confirmations be dishonest). 
+Whilst the majority of users who hold SNR will wish to stake it in order to benefit passively from protocol revenue distributions, staking is not required for all users. Only users who wish to act as confirmer-makers, confirmer-joiners or arbiters will be required to stake and lock some of their SNR tokens. This requirement will minimise the risk of Sybil attacks, as it will ensure 'skin in the game' and introduce a cost for each new address that wishes to act as a confirmer (whilst also putting those funds at risk should the confirmations be dishonest). 
 A key role of the SNR token will therefore be to act as collateral, allowing slashing to occur in cases of Sybil attacks or dishonest behaviour by confirmer-makers or confirmer-joiners.*
 
-Following the resolution of a scenario pool, notifications will be triggered and sent to its askers immediately. The pool will then enter a 72-hour cool down period. During this time, if more than 20%** (‘asker dispute threshold’) of that pool’s askers flag the pool as having been incorrectly resolved, the following will occur:
-1. The planned pay-out to that pool’s confirmers will be paused
-2. The scenario will be flagged for dispute resolution
-3. 25%** of all addresses staking SNR at the time of dispute will be randomly selected to act as arbiters for that pool
-4. The scenario pool’s ‘cool-down’ period will end and a new ‘arbitration period’ lasting 72 hours will begin
-5. Eligible addresses will vote on-chain to answer ‘yes’ or ‘no’ to the question: was this pool disputed correctly?
+### 3 - Arbitration
 
-## Following the arbitration period<br/>
+Following the resolution of a scenario pool, notifications will be triggered and sent to its askers immediately. The pool will then enter a 72-hour cool down period, after which that pool’s funds will be paid out.
+
+During this time, if more than 20%** ('asker dispute threshold') of that pool’s askers flag the pool as having been incorrectly resolved, the following will occur:
+
+1. The scenario pool will switch to 'RESOLVE-DISPUTED'
+2. The planned pay-out to that pool’s confirmers will be paused
+3. The scenario will be flagged for dispute resolution
+4. 25%** of all addresses staking SNR at the time of dispute will be randomly selected to act as arbiters for that pool
+5. The scenario pool’s ‘cool-down’ period will end and a new ‘arbitration period’ lasting 72 hours will begin
+6. Eligible addresses will vote on-chain to answer ‘yes’ or ‘no’ to the question: was this scenario disputed correctly?
+
+<b style={{color:'white'}}>Following the arbitration period</b><br/>
 <i>If arbiters have voted that the dispute should stand:</i><br/>
 1. The pool’s confirmer-maker will have 10% of their staked SNR slashed**
 2. The pool’s confirmer-joiners will have 5% of their staked SNR slashed**
@@ -61,9 +67,11 @@ Following the resolution of a scenario pool, notifications will be triggered and
 5. Voting arbiters will receive their share of the arbitration payment (irrespective of the result of the dispute resolution)
 
 <i>If arbiters have voted that the dispute should not stand:</i><br/>
-1. The scenario pool will switch from 'RESOLVE-PAUSED' to 'RESOLVED'
+1. The scenario pool will switch from 'RESOLVE-DISPUTED' to 'RESOLVED'
 2. The pool’s funds will be paid out to users according to protocol revenue share rules
 3. Voting arbiters will receive their share of the arbitration payment (irrespective of the result of the dispute resolution)
+
+See [Arbiter Fund](/arbiter-fund) for more information.
 
 <Note>* It is worth noting that SCENARIO’s design means that honest Sybil attacks do not harm the protocol’s core purpose of triggering notifications; as long as askers are quickly and correctly advised of scenarios that have occurred, it is inconsequential if a small number of actors colluded or acted under many addresses to resolve that pool. It is only in cases of dishonest or incorrect notifications that Sybil attacks present a problem, and it is for this reason that the 72-hour cool down period and SNR slashing exist.</Note>
 <Note>** It should also be noted that protocol rules relating to the ideal asker dispute threshold percentage, eligible arbiter breakdowns, slashing percentages, minimum staking amounts, staking lock periods, staking tiers and/or proportional access to revenue distributions will need to be refined during protocol testing, given the relationship between these considerations and factors such as organic user behaviour, game theory and SNR price.</Note>
