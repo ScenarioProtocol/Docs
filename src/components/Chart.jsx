@@ -17,9 +17,9 @@ const PieChart = () => {
         setOptions({
             labels: [
                 'Protocol Users',
+                'Builder Bounty Fund',
                 'Founding Team',
                 'Backers',
-                'Builder Bounty Fund',
                 'Partnering Fund',
                 'Advisors'
             ],
@@ -59,7 +59,7 @@ const PieChart = () => {
                         options={options}
                         type="donut"
                         width="350"
-                        series={[60, 13, 12, 7, 6, 2]}
+                        series={[50, 15, 13, 13, 7, 2]}
                     />
                 )}
             </div>
@@ -67,9 +67,14 @@ const PieChart = () => {
                 <table className='table-auto mt-0'>
                     <tbody>
                         <tr>
-                            <td>60%</td>
+                            <td>50%</td>
                             <td><span className='text-[#508181]'>Protocol Users</span></td>
                             <td>4 year distribution, 1-year linear vest</td>
+                        </tr>
+                        <tr>
+                            <td>15%</td>
+                            <td><span className='text-[#6d5081]'>Builder Bounty Fund</span></td>
+                            <td>Fully liquid at TGE, issued at the discretion of founding team</td>
                         </tr>
                         <tr>
                             <td>13%</td>
@@ -77,17 +82,12 @@ const PieChart = () => {
                             <td>Distributed at TGE, vesting period applies</td>
                         </tr>
                         <tr>
-                            <td>12%</td>
+                            <td>13%</td>
                             <td><span className='text-[#525081]'>Backers</span></td>
                             <td>Distributed at TGE, vesting period applies</td>
                         </tr>
                         <tr>
                             <td>7%</td>
-                            <td><span className='text-[#6d5081]'>Builder Bounty Fund</span></td>
-                            <td>Fully liquid at TGE, issued at the discretion of founding team</td>
-                        </tr>
-                        <tr>
-                            <td>6%</td>
                             <td><span className='text-[#81506d]'>Community Marketing & Partnering Fund</span></td>
                             <td>Fully liquid at TGE, issued at the discretion of founding team</td>
                         </tr>
