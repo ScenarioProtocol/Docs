@@ -8,6 +8,8 @@ const DynamicChart = dynamic(
     { ssr: false } 
 )
 
+const series = [50, 15, 15, 13, 7, 2];
+
 const PieChart = () => {
 
     const [loaded, setLoaded] = useState(false)
@@ -47,6 +49,13 @@ const PieChart = () => {
                     },
                 },
             ],
+            dataLabels: {
+                enabledOnSeries: [1],
+                formatter: function(val, opts) {
+                    console.log(opts)
+                    return series[opts.seriesIndex].toFixed(0)
+                }
+            }
         })
         setLoaded(true)
     }, [])
@@ -58,8 +67,8 @@ const PieChart = () => {
                     <DynamicChart
                         options={options}
                         type="donut"
-                        width="350"
-                        series={[50, 15, 15, 13, 7, 2]}
+                        width="400"
+                        series={series}
                     />
                 )}
             </div>
