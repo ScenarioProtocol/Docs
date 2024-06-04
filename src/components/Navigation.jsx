@@ -204,7 +204,7 @@ export const navigation = [
       { title: 'Growth Pool', href: '/growth-pool' },
       { title: 'Early Phases', href: '/early-phases' },
       { title: 'Advisors', href: '/advisors' },
-      { title: 'Deployment', href: '/deployment' },
+      // { title: 'Deployment', href: '/deployment' },
     ],
   },
   // {

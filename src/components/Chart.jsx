@@ -18,8 +18,8 @@ const PieChart = () => {
             labels: [
                 'Protocol Users',
                 'Builder Bounty Fund',
-                'Founding Team',
                 'Backers',
+                'Founding Team',
                 'Partnering Fund',
                 'Advisors'
             ],
@@ -27,7 +27,7 @@ const PieChart = () => {
                 type: "donut",
                 width: '100%',
             },
-            colors: ["#508181", "#506d81", "#525081", "#6d5081", "#81506d", "#816550"],
+            colors: ["#508181", "#6d5081", "#525081", "#506d81", "#81506d", "#816550"],
             legend: {
                 show: false,
             },
@@ -59,7 +59,7 @@ const PieChart = () => {
                         options={options}
                         type="donut"
                         width="350"
-                        series={[50, 15, 13, 13, 7, 2]}
+                        series={[50, 15, 15, 13, 7, 2]}
                     />
                 )}
             </div>
@@ -77,13 +77,13 @@ const PieChart = () => {
                             <td>Fully liquid at TGE, issued at the discretion of founding team</td>
                         </tr>
                         <tr>
-                            <td>13%</td>
-                            <td><span className='text-[#506d81]'>Founding Team</span></td>
+                            <td>15%</td>
+                            <td><span className='text-[#525081]'>Backers</span></td>
                             <td>Distributed at TGE, vesting period applies</td>
                         </tr>
                         <tr>
                             <td>13%</td>
-                            <td><span className='text-[#525081]'>Backers</span></td>
+                            <td><span className='text-[#506d81]'>Founding Team</span></td>
                             <td>Distributed at TGE, vesting period applies</td>
                         </tr>
                         <tr>
