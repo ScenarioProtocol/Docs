@@ -2,13 +2,13 @@ import { Note } from '@/components/mdx'
 import PieChart from '@/components/Chart'
 
 export const description =
-  'How the mechanisms for scenario pool creation and resolution, covering the movement of funds within these steps and the roles played by protocol participants across both user types.'
+  'How the mechanisms for scenario pool creation and resolution, covering the movement of funds within these steps and the roles played by protocol participants across various user types.'
 
 # Protocol Tokenomics
 
 The process shown in the [Workflow](/workflow) section explains the mechanisms for scenario pool creation and resolution, covering the movement of funds within these steps and the roles played by protocol participants across both user types.
 
-However, without additional protection, such a process would be highly vulnerable to manipulation. Depending on the number of confirmer-joiners required, Sybil attacks would be easily carried out,  allowing attackers to collude in creating confirmations, or for one attacker to act as both the confirmer-maker and all confirmer-joiners. This would leave open the possibility of that attacker incorrectly marking a scenario as ‘resolved,’ sending out false notifications, and unfairly gaining access to all of that scenario pool’s bounty.
+However, without additional measures, such a process would be vulnerable to manipulation. Depending on the number of confirmer-joiners required, Sybil attacks would be easily carried out, allowing users to collude in creating confirmations, or for one actor to act as both the confirmer-maker and all confirmer-joiners. This would make it too easy to incorrectly mark a scenario as ‘resolved,’ sending out false notifications, while gaining access to all of that scenario pool’s bounty.
 
 To protect against this, SCENARIO will make use of its own token to serve a range of crypto-economic functions and underpin a more robust protocol.
 
@@ -26,17 +26,17 @@ In order to support a safe, staged protocol roll-out (during which the V1 scenar
 
 ### 1 - Revenue Distribution
 
-10% of all funds in each scenario pool, once resolved, will be returned to ‘the protocol’ as revenue. 
+15% of all funds in each scenario pool, once resolved, will be returned to ‘the protocol’ as revenue. 
 
-Of this proportion, 8% will be sent as revenue to SNR users and stakers and the remaining 2% will be sent to the protocol’s growth pool (see [Protocol Revenues](/revenues)). 
+Of this proportion, 10% will be sent to SNR stakers and the remaining 5% will be sent to the protocol’s arbiter fund (3%) and growth pool (2%) (see [Protocol Revenues](/revenues)). 
 
-SNR will be staked and/or used to provide liquidity, with these actions giving users a ‘staking weight’ which will then determine their proportional claim on the 8% of all protocol revenues directed to stakers.
+SNR will be staked and/or used to provide liquidity, with these actions giving users a ‘staking weight’ which will then determine their proportional claim on the 10% of all protocol revenues directed to stakers.
 
-A total protocol fee cut of 10% from resolved pools is expected to be viable as long as resolving scenario pools is profitable for those involved in correctly confirming them. Engaged, rational actors should be expected to choose to contribute to that process because they will profit from doing so, with this likely to be true even if the protocol’s cut was much larger than 10%.
+A total protocol fee cut of 15% from resolved pools is expected to be viable as long as resolving scenario pools is profitable for those involved in correctly confirming them. Engaged, rational actors should be expected to choose to contribute to that process because they will profit from doing so, with this likely to be true even if the protocol’s cut was much larger than 15%.
 
-At scale, SCENARIO will be populated with many thousands of scenario pools, and thousands of active confirmers. Competitor products would first need to compete on factors such as network size, overall bounty pool size and speed of scenario confirmation, before being able to compete by bettering SCENARIO’s 10% take-rate. 
+At scale, SCENARIO will be populated with many thousands of scenario pools, and thousands of active confirmers. Competitor products would first need to compete on factors such as network size, overall bounty pool size and speed of scenario confirmation, before being able to compete by bettering SCENARIO’s 15% take-rate. 
 
-If the underlying protocol is bootstrapped successfully, other builders or competitors will be incentivized to rely collectively on the powerful SCENARIO protocol and its smart contracts, and instead compete at the user-interface level by adding additional take-rates of their own at that layer.
+If the underlying protocol is bootstrapped successfully, other builders or competitors will be incentivized to rely collectively on the powerful SCENARIO protocol and its smart contracts, and instead compete at the user-interface level by adding additional services and take-rates of their own at that layer.
 
 (See [Protocol Revenues](/revenues)) 
 
@@ -54,7 +54,7 @@ During this time, if more than 20%** ('asker dispute threshold') of that pool’
 1. The scenario pool will switch to 'RESOLVE-DISPUTED'
 2. The planned pay-out to that pool’s confirmers will be paused
 3. The scenario will be flagged for dispute resolution
-4. 25%** of all addresses staking SNR at the time of dispute will be randomly selected to act as arbiters for that pool
+4. 10%** of all addresses staking SNR at the time of dispute will be randomly selected to act as arbiters for that pool
 5. The scenario pool’s ‘cool-down’ period will end and a new ‘arbitration period’ lasting 72 hours will begin
 6. Eligible addresses will vote on-chain to answer ‘yes’ or ‘no’ to the question: was this scenario disputed correctly?
 
