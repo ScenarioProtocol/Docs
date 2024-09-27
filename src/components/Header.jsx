@@ -62,7 +62,7 @@ export const Header = forwardRef(function Header({ className }, ref) {
       <div className="flex items-center gap-5 lg:hidden">
         <MobileNavigation />
         <Link href="/" aria-label="Home">
-          <Image src={logo.src} className='h-10 hidden dark:block' width={125} height={30} />
+          <Image src={"/logo2.png"} className='h-10 hidden dark:block w-auto' width={250} height={30} />
         </Link>
       </div>
       <div className="flex items-center gap-5">
