@@ -201,7 +201,6 @@ export const navigation = [
       { title: 'Marketing & Partnering', href: '/marketing-and-partnering' },
       { title: 'Staged Roll-out', href: '/rollout' },
       { title: 'Arbiter Fund', href: '/arbiter-fund' },
-      { title: 'Growth Pool', href: '/growth-pool' },
       { title: 'Early Phases', href: '/early-phases' },
       { title: 'Advisors', href: '/advisors' },
       // { title: 'Deployment', href: '/deployment' },

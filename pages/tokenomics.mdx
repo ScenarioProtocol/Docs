@@ -18,36 +18,21 @@ In addition to representing an abbreviation of the protocol’s name, the acrony
 
 The SNR token will be crucial to the effective functioning of the protocol once fully deployed.
 
-It will not function as a governance token, and will not be used to vote on protocol changes or upgrades. Instead, SNR will perform a set of roles that help to protect against Sybil attacks, facilitate dispute resolution, and allow for the protocol’s revenues to be distributed to its users over time. 
+It will not function as a governance token, and will not be used to vote on protocol changes or upgrades. Instead, SNR will act as an access and reputation token. It will help to protect against Sybil attacks, facilitate dispute resolution, and allow for protocol and user value alignment.  
 
 In order to support a safe, staged protocol roll-out (during which the V1 scenario pool contracts will be used to test and monitor user behaviour and incentive balancing), the SNR token will not be generated at protocol launch (see [Staged Roll-out](/rollout)).
 
 ## Token's Primary functions
 
-### 1 - Revenue Distribution
+### 1 - Collateral, Reputation, Sybil Resistance and Slashing
 
-15% of all funds in each scenario pool, once resolved, will be returned to ‘the protocol’ as revenue. 
+Whilst the majority of users who hold SNR will wish to stake it, staking is not required for all users. Only users who wish to act as confirmer-makers, confirmer-joiners or arbiters will be required to stake and lock some of their SNR tokens. This requirement will minimise the risk of Sybil attacks, as it will ensure 'skin in the game' and introduce a cost for each new address that wishes to act as a confirmer (whilst also putting those funds at risk should the confirmations be dishonest). A key role of the SNR token will therefore be to act as collateral, allowing slashing to occur in cases of Sybil attacks or dishonest behaviour by confirmer-makers or confirmer-joiners.*
 
-Of this proportion, 10% will be sent to SNR stakers and the remaining 5% will be sent to the protocol’s arbiter fund (3%) and growth pool (2%) (see [Protocol Revenues](/revenues)). 
+A core feature of Scenario is the presence of user Reputation Scoring. The calculation and role of a user’s reputation score will evolve alongside the protocol, and will take into account factors such as user behaviour, scenario confirmation performance, and SNR token staking.
 
-SNR will be staked and/or used to provide liquidity, with these actions giving users a ‘staking weight’ which will then determine their proportional claim on the 10% of all protocol revenues directed to stakers.
+### 2 - Arbitration
 
-A total protocol fee cut of 15% from resolved pools is expected to be viable as long as resolving scenario pools is profitable for those involved in correctly confirming them. Engaged, rational actors should be expected to choose to contribute to that process because they will profit from doing so, with this likely to be true even if the protocol’s cut was much larger than 15%.
-
-At scale, SCENARIO will be populated with many thousands of scenario pools, and thousands of active confirmers. Competitor products would first need to compete on factors such as network size, overall bounty pool size and speed of scenario confirmation, before being able to compete by bettering SCENARIO’s 15% take-rate. 
-
-If the underlying protocol is bootstrapped successfully, other builders or competitors will be incentivized to rely collectively on the powerful SCENARIO protocol and its smart contracts, and instead compete at the user-interface level by adding additional services and take-rates of their own at that layer.
-
-(See [Protocol Revenues](/revenues)) 
-
-### 2 - Collateral: Sybil Resistance and Slashing
-
-Whilst the majority of users who hold SNR will wish to stake it in order to benefit from protocol revenue distributions, staking is not required for all users. Only users who wish to act as confirmer-makers, confirmer-joiners or arbiters will be required to stake and lock some of their SNR tokens. This requirement will minimise the risk of Sybil attacks, as it will ensure 'skin in the game' and introduce a cost for each new address that wishes to act as a confirmer (whilst also putting those funds at risk should the confirmations be dishonest). 
-A key role of the SNR token will therefore be to act as collateral, allowing slashing to occur in cases of Sybil attacks or dishonest behaviour by confirmer-makers or confirmer-joiners.*
-
-### 3 - Arbitration
-
-Following the resolution of a scenario pool, notifications will be triggered and sent to its askers immediately. The pool will then enter a 72-hour cool down period, after which that pool’s funds will be paid out.
+Following the resolution of a scenario pool, notifications will be triggered and sent to its askers immediately. The pool will then enter a cool down period, after which that pool’s funds will be paid out.
 
 During this time, if more than 20%** ('asker dispute threshold') of that pool’s askers flag the pool as having been incorrectly resolved, the following will occur:
 
@@ -78,28 +63,25 @@ See [Arbiter Fund](/arbiter-fund) for more information.
 
 The protocol will seek to strike a balance between Sybil resistance and fairness, such that anyone who wishes to participate as a confirmer is able to do so.
 
-The protocol’s early advisors will play a key role in assisting to refine the protocol’s planned tokenomics and adjusting the balance between incentives and penalties.
+The protocol’s early users and advisors will play a key role in assisting to refine the protocol’s planned tokenomics and adjusting the balance between incentives and penalties.
 
 ## SNR Token Supply and Distribution
 
-The SNR token will be a standard ERC-20 token with a maximum supply of 1 billion (1,000,000,000). It will not be minted immediately, instead being introduced as part of a token generation event (TGE) which will follow an initial period of more limited-functionality protocol testing and user reputation scoring. (See [Staged Roll-out](/rollout)). There will be no tail emissions or ongoing inflation of the token supply; 4 years after the TGE, the supply will be fully distributed (note: fully vesting the supply will take one additional year).
-
-The SNR token, once minted, will exist in a combination of escrowed and liquid form. The majority will begin as escrowed SNR and will be subject to vesting periods of up to 3 years (linear). Some SNR will be liquid at TGE in order to support the use of these tokens for user, builder and partner incentives. More detail on these breakdowns is shown below.
+The SNR token will be a standard ERC-20 token with a maximum supply of 1 billion (1,000,000,000). It will not be minted immediately, instead being introduced as part of a token generation event (TGE) which will follow an initial period of more limited-functionality protocol testing and user reputation scoring. (See [Staged Roll-out](/rollout)). 
 
 Potential SNR token allocation:<br/>
-* <span class="text-white">50%</span> will be allocated to users of the protocol across its first 4 years (with 1-year linear vesting), distributed across 2 separate token distribution events: one which will follow a period of protocol testing and use by the community in year 1, and a second which will run over years 2-4 and be related to protocol use. The first testing phase (and distribution 1) will be based partly on whitelisted addresses.
-* <span class="text-white">15%</span> will be allocated to a builder bounty fund
-* <span class="text-white">15%</span> will be allocated to a early backers
-* <span class="text-white">13%</span> will be allocated to the founding team
-* <span class="text-white">5%</span> will be allocated to a community marketing and partnering fund
-* <span class="text-white">2%</span> will be allocated to advisors
+* <span class="text-white">55%</span> to the community and/or users of the protocol 
+* <span class="text-white">15%</span> to early backers
+* <span class="text-white">15%</span> to the founding team
+* <span class="text-white">13%</span> to project treasury
+* <span class="text-white">2%</span> to advisors
 
 Note: the above token breakdown may be reviewed and updated prior to TGE
 
 ## Genesis Confirmer NFT
 
-Prior to TGE, a Genesis NFT will be made available to users. Eligibility to access the Genesis NFT will be based on a combination of whitelisted communities and early engagement with Scenario.
+Prior to TGE, a Scenario Genesis NFT will be made available to users. Eligibility to access the Genesis NFT will be based on a combination of whitelisted communities, reputation scoring, and early engagement with Scenario.
 
-The Genesis NFT (max supply 1000) will be the premier asset in the Scenario machine. Initially, it will give its holders the right to act as the first and only Confirmers for the protocol - a privileged role which will help the founding team to build and refine Scenario’s parameters during its earliest phases.
+The Genesis NFT will be the protocol’s premier asset. Initially, it will give its holders the right to act as the first Confirmers for the protocol - a privileged role which will help the founding team to build and refine Scenario’s parameters during its earliest phases.
 
-Confirmers are the ‘lifeblood’ of Scenario - they keep the machine running by triggering user-requested notifications, building their reputation for accuracy and liveness in the process. The Genesis NFT is an access pass to become one of Scenario’s first 1000 ever confirmers.
+Confirmers are the ‘lifeblood’ of Scenario - they keep the machine running by triggering user-requested notifications, building their reputation for accuracy and liveness in the process. The Genesis NFT is an access pass to become one of Scenario’s first ever Confirmers and an on-chain record of a user’s presence at Genesis.
