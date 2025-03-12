@@ -37,7 +37,7 @@ const resources = [
   {
     name: 'Who are...',
     description:
-      'Economically incentivised to keep the service running',
+      'incentivised to keep the service running',
     icon: TagIcon,
     pattern: {
       y: 32,
