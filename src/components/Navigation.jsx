@@ -119,7 +119,7 @@ function NavigationGroup({ group, className }) {
     group.links.findIndex((link) => link.href === router.pathname) !== -1
 
   return (
-    <li className={clsx('relative mt-6', className)}>
+    <li className={clsx('relative mt-4', className)}>
       <motion.h2
         layout="position"
         className="text-xs font-semibold text-zinc-900 dark:text-white"
@@ -185,7 +185,7 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: 'Litepaper',
+    title: 'Core Protocol',
     links: [
       { title: 'The Protocol', href: '/' },
       { title: 'Purpose', href: '/purpose' },
@@ -193,29 +193,41 @@ export const navigation = [
       { title: 'User Categories', href: '/user-categories' },
       { title: 'Workflow', href: '/workflow' },
       { title: 'Notifications', href: '/notifications' },
-      { title: 'Related Projects', href: '/related-projects' },
+    ],
+  },
+  {
+    title: 'Economics & Tokenomics',
+    links: [
       { title: 'Tokenomics', href: '/tokenomics' },
       { title: 'Protocol Revenues', href: '/revenues' },
       { title: 'Liquidity', href: '/liquidity' },
-      { title: 'Builder Bounty', href: '/builder-bounty' },
-      { title: 'Marketing & Partnering', href: '/marketing-and-partnering' },
-      { title: 'Staged Roll-out', href: '/rollout' },
       { title: 'Arbiter Fund', href: '/arbiter-fund' },
-      { title: 'Early Phases', href: '/early-phases' },
-      { title: 'Advisors', href: '/advisors' },
-      // { title: 'Deployment', href: '/deployment' },
+      { title: 'Growth Pool', href: '/growth-pool' },
     ],
   },
-  // {
-  //   title: 'Resources',
-  //   links: [
-  //     { title: 'Contacts', href: '/contacts' },
-  //     { title: 'Conversations', href: '/conversations' },
-  //     { title: 'Messages', href: '/messages' },
-  //     { title: 'Groups', href: '/groups' },
-  //     { title: 'Attachments', href: '/attachments' },
-  //   ],
-  // },
+  {
+    title: 'Technical Implementation',
+    links: [
+      { title: 'Staged Roll-out', href: '/rollout' },
+      { title: 'Early Phases', href: '/early-phases' },
+      { title: 'Deployment', href: '/deployment' },
+    ],
+  },
+  {
+    title: 'Ecosystem & Growth',
+    links: [
+      { title: 'Builder Bounty', href: '/builder-bounty' },
+      { title: 'Marketing & Partnering', href: '/marketing-and-partnering' },
+      { title: 'Related Projects', href: '/related-projects' },
+      { title: 'Advisors', href: '/advisors' },
+    ],
+  },
+  {
+    title: 'AI & Automation',
+    links: [
+      { title: 'Scenario Agent', href: '/ai-agent' },
+    ],
+  },
 ]
 
 export function Navigation(props) {

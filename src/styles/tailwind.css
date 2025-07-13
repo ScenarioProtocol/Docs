@@ -26,3 +26,64 @@ th p {
 .table-auto th {
   vertical-align: top;
 }
+
+/* Custom Scrollbar Styles */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.zinc.900');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.zinc.600');
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.emerald.500');
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: theme('colors.emerald.400');
+}
+
+::-webkit-scrollbar-corner {
+  background: theme('colors.zinc.900');
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.zinc.600') theme('colors.zinc.900');
+}
+
+/* Light mode scrollbar adjustments */
+.light ::-webkit-scrollbar-track {
+  background: theme('colors.zinc.100');
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: theme('colors.zinc.400');
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.emerald.500');
+}
+
+.light ::-webkit-scrollbar-thumb:active {
+  background: theme('colors.emerald.600');
+}
+
+.light ::-webkit-scrollbar-corner {
+  background: theme('colors.zinc.100');
+}
+
+.light * {
+  scrollbar-color: theme('colors.zinc.400') theme('colors.zinc.100');
+}
