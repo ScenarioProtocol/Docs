@@ -222,7 +222,7 @@ export const navigation = [
   {
     title: 'Ecosystem & Growth',
     links: [
-      { title: 'Oracle Data', href: '/oracle-data' },
+      //{ title: 'Oracle Data', href: '/oracle-data' },
       { title: 'Builder Bounty', href: '/builder-bounty' },
       { title: 'Marketing & Partnering', href: '/marketing-and-partnering' },
       { title: 'Related Projects', href: '/related-projects' },
