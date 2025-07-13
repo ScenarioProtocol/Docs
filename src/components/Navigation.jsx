@@ -196,6 +196,12 @@ export const navigation = [
     ],
   },
   {
+    title: 'AI & Automation',
+    links: [
+      { title: 'Scenario Agent', href: '/ai-agent' },
+    ],
+  },
+  {
     title: 'Economics & Tokenomics',
     links: [
       { title: 'Tokenomics', href: '/tokenomics' },
@@ -210,22 +216,17 @@ export const navigation = [
     links: [
       { title: 'Staged Roll-out', href: '/rollout' },
       { title: 'Early Phases', href: '/early-phases' },
-      { title: 'Deployment', href: '/deployment' },
+      //{ title: 'Deployment', href: '/deployment' },
     ],
   },
   {
     title: 'Ecosystem & Growth',
     links: [
+      { title: 'Oracle Data', href: '/oracle-data' },
       { title: 'Builder Bounty', href: '/builder-bounty' },
       { title: 'Marketing & Partnering', href: '/marketing-and-partnering' },
       { title: 'Related Projects', href: '/related-projects' },
       { title: 'Advisors', href: '/advisors' },
-    ],
-  },
-  {
-    title: 'AI & Automation',
-    links: [
-      { title: 'Scenario Agent', href: '/ai-agent' },
     ],
   },
 ]
